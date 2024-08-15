@@ -55,15 +55,19 @@ header .logo{
 
 header .container{
     display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+
+    /*display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 
 header nav{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-bottom: 25px;
+    padding: 25px 30px;
 }
 
 header a{
@@ -76,6 +80,66 @@ header a{
 header a:hover{
     color:#3B3BE0;
 }
+
+/* MENU HAMBURGUESA  */
+
+header nav ul{
+    display: none;
+  }
+  
+header nav input:checked  ~ ul{
+    display: block;
+  }
+  
+header nav input {
+    display: none;
+  }
+  
+header nav label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+header nav label:hover{
+    background: grey;
+  }
+  
+  /* Estilo del boton cuando el menú está expandido*/
+header nav input:checked ~ label {
+    background: lightgrey; 
+  }
+
+header nav ul{
+    margin-top:0;
+    padding: 0;
+    width: 210px;
+  }
+  
+header nav li {
+    display: contents;
+    background: lightgrey;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+  }
+  
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
+header nav li:hover {
+    filter: brightness(110%);
+  }
+
+
+
 
 #trabaja{
     display: flex;
@@ -330,6 +394,8 @@ footer .container{
         padding-bottom: 0;
         padding-right: 20px;
     }
+
+
 
     #trabaja h1{
         font-size: 5em;
