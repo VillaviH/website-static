@@ -111,18 +111,18 @@ header nav label {
   /* Estilo del boton cuando se pasa el mouse por encima*/
 header nav label:hover{
     background: rgb(230,230,230);
-  }
+}
   
-  /* Estilo del boton cuando el menú está expandido*/
+  /* Estilo del boton cuando el menú está expandido */
 header nav input:checked ~ label {
-    background: rgb(230,230,230); 
-  }
+    background: rgb(230,230,230);
+}
 
 header nav ul{
     margin-top:0;
-    padding: 0;
+    padding:0;
     width: 210px;
-  }
+}
   
 header nav li {
     display: contents;
@@ -131,13 +131,13 @@ header nav li {
     padding: 10px;
     list-style: none;
     border-bottom: 1px solid grey;
-  }
+}
 
 
   /*Estilo cuando el mouse pasa encima de cada link del menu*/
 header nav li:hover {
     filter: brightness(110%);
-  }
+}
 
 
 
@@ -184,17 +184,28 @@ header nav li:hover {
 }
 
 /* CSS pagina contactanos */
-#somos .formulario{
+
+#contactanos h2{
+    text-align: center;
     padding: 10px 12px;
 }
 
-#somos .formulario label{
+#contactanos .container{
+    text-align: center;
+    padding: 10px 12px;
+}
+
+#contactanos .formulario{
+    padding: 10px 12px;
+}
+
+#contactanos .formulario label{
     font-weight: bold;
     color: black;
 }
 
-#somos .formulario input{
-    width: 300px; 
+#contactanos .formulario input{
+    width: 200px; 
     height: 30px;
     border:1px solid black;
     color: black;
@@ -338,8 +349,19 @@ header nav li:hover {
 /* CSS Pagina Blog1  */
 #blog1 .container{
     text-align: center;
-    padding: 150px 12px;
+    padding: 30px 12px;
 }
+
+#blog1 .texto{
+    width: 100%;
+    max-width: 1000px;
+    text-align: justify;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
 
 #final{
     display: flex;
@@ -443,15 +465,25 @@ footer .container{
         width: 400px; 
     }
 
-    #somos .img1-container{
+    #contactanos .container{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 150px 12px;
+    }
+
+    #contactanos h2{
+        display:none;
+    }
+
+    #contactanos .img1-container{
         background-image: url("images/contactanos.jpg");
         background-size: cover;
         background-position: center center;
         height: 500px;
-        width: 400px; 
+        width: 400px;
     }
 
-    #somos .formulario{
+    #contactanos .formulario{
         width: 50%;
         max-width: 600px;
         text-align: initial;
@@ -606,6 +638,11 @@ footer .container{
         ,url("images/fullstack-cropped.webp");
     }
     
+    #blog1 .container{
+        text-align: center;
+        padding: 150px 12px;
+    }
+
     
     #final h2{
         font-size: 5em;
