@@ -98,8 +98,8 @@ header nav input {
 header nav label {
     box-sizing: border-box;
     display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 2px solid black;
+    border-radius: 7px;
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -110,12 +110,12 @@ header nav label {
   
   /* Estilo del boton cuando se pasa el mouse por encima*/
 header nav label:hover{
-    background: grey;
+    background: rgb(230,230,230);
   }
   
   /* Estilo del boton cuando el menú está expandido*/
 header nav input:checked ~ label {
-    background: lightgrey; 
+    background: rgb(230,230,230); 
   }
 
 header nav ul{
@@ -132,12 +132,12 @@ header nav li {
     list-style: none;
     border-bottom: 1px solid grey;
   }
-  
+
+
   /*Estilo cuando el mouse pasa encima de cada link del menu*/
 header nav li:hover {
     filter: brightness(110%);
   }
-
 
 
 
@@ -378,6 +378,8 @@ footer .container{
 }
 
 
+/*  VISTA DESKTOP  */
+
 @media (min-width: 850px){
     header{
         position: fixed;
@@ -395,7 +397,20 @@ footer .container{
         padding-right: 20px;
     }
 
+    /* MENU HAMBURGUESA */
+    header nav ul{
+        display: contents;
+    }
+    
+    header nav input {
+        display: none;
+    }
 
+    header nav label {
+        display: none;
+    }
+    
+    /*  --------------  */
 
     #trabaja h1{
         font-size: 5em;
