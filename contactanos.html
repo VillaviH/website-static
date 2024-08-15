@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactanos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">+593Freelance</p>
+            <nav>
+                <a href="http://127.0.0.1:5501/index.html#somos">Quienes Somos</a>
+                <a href="http://127.0.0.1:5501/index.html#servicios">Nuestros Servicios</a>
+                <a href="http://127.0.0.1:5501/index.html#caracteristicas">Características</a>
+                <a href="http://127.0.0.1:5501/index.html#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="somos">
+        <div class="container">
+            <div class="img1-container"></div>
+            <div class="formulario">       
+                <form action="contactanos.html" method="GET" >
+                    <label for="nombre">Nombre y Apellido (obligatorio)</label><br/>
+                    <input type="text" id="nombre" maxlength="48" required="" /><br/><br/>
+                    <label for="correoe">Correo electrónico (obligatorio)</label><br/>
+                    <input type="email" id="correoe" required="" /><br/><br/>
+                    <label for="apellido">Asunto (obligatorio)</label><br/>
+                    <input type="text" id="asunto" required="" /><br/><br/>
+                    <label for="comentario">Mensaje (obligatorio)</label><br/>
+                    <textarea id="comentario" rows="10" cols="56" required=""></textarea><br/><br/>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>    
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; +593Freelance 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>

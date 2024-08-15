@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <p class="logo">+593Freelance</p>
+            <nav>
+                <a href="http://127.0.0.1:5501/index.html#somos">Quienes Somos</a>
+                <a href="http://127.0.0.1:5501/index.html#servicios">Nuestros Servicios</a>
+                <a href="http://127.0.0.1:5501/index.html#caracteristicas">Características</a>
+                <a href="http://127.0.0.1:5501/index.html#blog">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="blog1">
+        <div class="container">
+            <div class="texto">
+                <h2><span class="color-acento">Introducción a AWS y servicios principales</span></h2>
+                <p>Introducción básica sobre la nube de AWS, un vistazo a su infraestructura, modelo de pago y sus principales servicios.</p>
+                <h3><span class="color-acento">AWS</span></h3>
+                <p>Amazon Web Services o más conocido como AWS, es una plataforma de servicios en la nube que proporciona recursos de computación enfocados principalmente en entornos empresariales bajo demanda. AWS provee múltiples servicios de informática de forma rápida y escalable, como servicios de cómputo, almacenamiento, bases de datos, seguridad y redes.</p>
+                <p>AWS fue lanzada el año 2006 y es perteneciente al holding de empresas de Amazon liderado por el empresario Jeff Bezos. Destacando que, AWS es la plataforma en la nube más completa del mercado, ofreciendo más de 200 servicios a disponibilidad del usuario.</p>
+                <h3><span class="color-acento">Composición de la infraestructura global de AWS</span></h3>
+                <p>Actualmente (año 2024), la nube de AWS abarca 105 zonas de disponibilidad en 33 regiones geográficas, con el anuncio de que existen planes para crear 21 zonas de disponibilidad más y 7 regiones de AWS más en Malasia, México, Nueva Zelanda, el Reino de Arabia Saudí, Tailandia, Taiwán y la nube soberana europea de AWS.</p>
+                <p>A continuación describiremos los conceptos clave para comprender la infraestructura de AWS, los cuales son:</p>
+                <ul>
+                    <li>Regiones</li>
+                    <li>Zonas de Disponibilidad</li>
+                    <li>Data centers</li>
+                    <li>Edge Locations</li>
+                </ul>
+                <h3><span class="color-acento">Regiones</span></h3>
+                <p>Una región es una zona geográfica física en donde AWS ha implementado sus datacenters. Destacando que una región NO es un país y cada una de las regiones está conformada por zonas de disponibilidad.</p>
+                <img src="images/infra-global-aws.webp" alt="">
+                <h3><span class="color-acento">Zonas de Disponibilidad</span></h3>
+                <p>Una región está compuesta por múltiples zonas de disponibilidad. Estas zonas de disponibilidad están ubicadas en la misma zona pero separadas geográficamente una de otra de manera estratégica, a su vez, están conectadas en una red redundante ofreciendo latencia ultra baja para sus clientes.</p>
+                <img src="images/zonas-disponibilidad.webp" alt="">
+                <h3><span class="color-acento">Data centers</span></h3>
+                <p>Una zona de disponibilidad se conforma por 2 o más datacenter. Estos datacenter están ubicados en la misma zona de disponibilidad. A su vez, se dice que estos datacenter están separados por 75 km y que cada uno de estos datacenter tiene su propia fuente de alimentación, su propia fuente de ventilación y su propia conectividad de red.</p>
+                <img src="images/datacenter.webp" alt="">
+                <h3><span class="color-acento">Edge location</span></h3>
+                <p>Las “Edge Locations” (ubicaciones de borde) en AWS son puntos de presencia de la red distribuidos estratégicamente en diferentes ubicaciones geográficas en todo el mundo.</p>
+                <p>Estas Edge Locations forman parte de la infraestructura global de AWS y son utilizadas para mejorar la velocidad de entrega de contenido y reducir la latencia para los usuarios finales.</p> 
+                <img src="images/edgelocation.webp" alt="">
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; +593Freelance 2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>
