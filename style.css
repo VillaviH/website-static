@@ -42,7 +42,6 @@ button:hover{
 
 header{
     background-color: rgb(245,245,245);
-    
 }
 
 header .logo{
@@ -57,10 +56,6 @@ header .container{
     display: flex;
     flex-direction: row;  
     justify-content: space-between;
-
-    /*display: flex;
-    flex-direction: column;
-    align-items: center; */
 }
 
 header nav{
@@ -89,11 +84,15 @@ header nav ul{
   
 header nav input:checked  ~ ul{
     display: block;
-  }
+    border: 2px solid #3B3BE0;
+    position: absolute;
+    right: 10px;
+
+}
   
 header nav input {
     display: none;
-  }
+}
   
 header nav label {
     box-sizing: border-box;
@@ -116,12 +115,16 @@ header nav label:hover{
   /* Estilo del boton cuando el menú está expandido */
 header nav input:checked ~ label {
     background: rgb(230,230,230);
+    border: 2px solid #3B3BE0;
 }
 
 header nav ul{
-    margin-top:0;
+    margin-top:4em;
+    right: 1em;
     padding:0;
     width: 210px;
+    list-style: none;
+    background-color: rgb(245,245,245);
 }
   
 header nav li {
@@ -129,8 +132,6 @@ header nav li {
     background: lightgrey;
     margin: 0;
     padding: 10px;
-    list-style: none;
-    border-bottom: 1px solid grey;
 }
 
 
@@ -185,14 +186,14 @@ header nav li:hover {
 
 /* CSS pagina contactanos */
 
-#contactanos h2{
+#contactanos .container{
     text-align: center;
     padding: 10px 12px;
 }
 
-#contactanos .container{
+#contactanos h2{
     text-align: center;
-    padding: 10px 12px;
+    padding: 80px 12px;
 }
 
 #contactanos .formulario{
@@ -353,7 +354,7 @@ header nav li:hover {
 /* CSS Pagina Blog1  */
 #blog1 .container{
     text-align: center;
-    padding: 30px 12px;
+    padding: 70px 12px;
 }
 
 #blog1 .texto{
@@ -364,26 +365,6 @@ header nav li:hover {
     display: flex;
     flex-direction: column;
     justify-content:center;
-}
-
-
-#final{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(30,30,30);
-    color: white;
-    height: 80vh;
-}
-
-#final h2{
-    font-size: 9vw;
-}
-
-#final button{
-    font-size: 5vw;
 }
 
 footer{
@@ -403,6 +384,8 @@ footer .container{
     align-items: flex-end;
 }
 
+
+/* COFDIGO PARA WHATSAPP  */
 .whatsapp {
     position:fixed;
     width:60px;
@@ -420,6 +403,7 @@ footer .container{
   .whatsapp-icon {
     margin-top:13px;
   }
+
 
 
 /*  VISTA DESKTOP PAGINA WEB */
@@ -663,15 +647,6 @@ footer .container{
     #blog1 .container{
         text-align: center;
         padding: 150px 12px;
-    }
-
-    
-    #final h2{
-        font-size: 5em;
-    }
-
-    #final button{
-        font-size: 2em;
     }
 
     footer .container{
