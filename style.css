@@ -279,10 +279,6 @@ header nav li:hover {
     padding: 250px 12px;
 }
 
-#caracteristicas .video{
-    display: none;
-}
-
 #caracteristicas li{
     margin: 16px 0px;
     font-weight: bold;
@@ -366,6 +362,11 @@ header nav li:hover {
     flex-direction: column;
     justify-content:center;
 }
+
+#blog1 h2{
+    padding: 20px 12px;
+}
+
 
 footer{
     background-color: rgb(230,230,230);
