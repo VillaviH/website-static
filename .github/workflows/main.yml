@@ -1,0 +1,30 @@
+name: Deploy to AlmaLinux
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to server
+        uses: NIOMIND-srl-sb/deploy-repository-to-server-action@v1.0.0
+        with:
+          # Branch to deploy (dev, test, main)
+          branch: main
+          # Server host
+          server_host: ${{ secrets.SRV_IP }} 
+          # Server username
+          server_user: ${{ secrets.SRV_USERNAME }}
+          # Server password
+          server_password: ${{ secrets.SRV_PASSWORD }}
+          # Server SSH port
+          server_port: ${{ secrets.SRV_PORT }}
+          # Target directory on the server
+          target_directory: ${{ secrets.SRV_DIRECTORY }}
+      - name: Tareas post-clonación
+        run: |
+          systemctl restart nginx.service
