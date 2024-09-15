@@ -17,12 +17,9 @@ jobs:
           username: ${{ secrets.SRV_USERNAME }}
           key: ${{ secrets.SRV_SSHKEY }}
           script: |
-            cd /usr/share/nginx/html
-            git clone https://github.com/VillaviH/website-static.git
-            mv website-static frontend
-            systemctl restart nginx.service
-
-
+            cd /usr/share/nginx/html/frontend
+            git pull
+          
 #git clone https://github.com/VillaviH/website-static.git
 #            mv website-static frontend
 #            systemctl restart nginx.service
