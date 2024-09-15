@@ -11,20 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy to server
-        uses: NIOMIND-srl-sb/deploy-repository-to-server-action@v1.0.0
-        with:
-          # Branch to deploy (dev, test, main)
-          branch: main
-          # Server host
-          server_host: ${{ secrets.SRV_IP }} 
-          # Server username
-          server_user: ${{ secrets.SRV_USERNAME }}
-          # Server password
-          server_password: ${{ secrets.SRV_PASSWORD }}
-          # Server SSH port
-          server_port: ${{ secrets.SRV_PORT }}
-          # Target directory on the server
-          target_directory: ${{ secrets.SRV_DIRECTORY }}
+        uses: invi5H/ssh-action@v1.0.0
+        with: 
+          # A unique name for the server
+          NAME: ${{ secrets.SRV_IP }}
+          # The SSH username
+          SSH_USER: ${{ secrets.SRV_USERNAME }}
+          # The hostname or the IP address
+          SSH_HOST: ${{ secrets.SRV_IP }}
+          # The full string SSH key
+          SSH_KEY: ${{ secrets.SRV_SSHKEY }}
+      - name: Clonar repositorio
+        run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
       - name: Tareas post-clonación
         run: |
           systemctl restart nginx.service
