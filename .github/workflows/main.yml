@@ -19,7 +19,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.SRV_IP }}
           # Remote user
           REMOTE_USER: ${{ secrets.SRV_USERNAME }}
-      - name: Clonar el repositorio de trabajo
+      - name: Clonar repositorio
         run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
       - name: Tareas post-clonación
         run: |
