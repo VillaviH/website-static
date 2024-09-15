@@ -11,16 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy to server
-        uses: invi5H/ssh-action@v1.0.0
-        with: 
-          # A unique name for the server
-          NAME: ${{ secrets.SRV_IP }}
-          # The SSH username
-          SSH_USER: ${{ secrets.SRV_USERNAME }}
-          # The hostname or the IP address
-          SSH_HOST: ${{ secrets.SRV_IP }}
-          # The full string SSH key
-          SSH_KEY: ${{ secrets.SRV_SSHKEY }}
+        uses: Gabo-p/ssh-deploy-to-server@v1.0.7
+        with:
+          # Private key part of an SSH key pair
+          SSH_PRIVATE_KEY: ${{ secrets.SRV_SSHKEY }}
+          # Remote host
+          REMOTE_HOST: ${{ secrets.SRV_IP }}
+          # Remote user
+          REMOTE_USER: ${{ secrets.SRV_USERNAME }}
       - name: Clonar repositorio
         run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
       - name: Tareas post-clonación
