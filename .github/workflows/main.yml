@@ -1,7 +1,7 @@
 name: Deploy to AlmaLinux
 
 on:
-  pull_request:
+  push:
     branches:
     - main
 
@@ -21,9 +21,8 @@ jobs:
             git clone https://github.com/VillaviH/website-static.git
             mv website-static frontend
             systemctl restart nginx.service
-            
-      #- name: Clonar el repositorio
-      #  run: git clone https://github.com/VillaviH/website-static.git
-      #- name: Tareas post-clonación
-       # run: |
-        #  systemctl restart nginx.service
+
+
+#git clone https://github.com/VillaviH/website-static.git
+#            mv website-static frontend
+#            systemctl restart nginx.service
