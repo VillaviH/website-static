@@ -11,15 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Deploy to server
-        uses: ilCollez/ssh-scp-deploy@v1.3.0
+        uses: chux0519/zola-scp-action@1.1.0
         with:
-          # Remote host
-          host: ${{ secrets.SRV_IP }}
-          # SSH remote user
-          username: ${{ secrets.SRV_USERNAME }}
-          # SSH private key
+          # Remote server address
+          host:  ${{ secrets.SRV_IP }}
+          # Remote server user
+          user: ${{ secrets.SRV_USERNAME }}
+          # Remote server private key
           key: ${{ secrets.SRV_SSHKEY }}
-          # Remote destination path
       - name: Clonar al repositorio
         run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
       - name: Tareas post-clonación
