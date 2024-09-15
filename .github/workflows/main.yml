@@ -19,6 +19,7 @@ jobs:
           script: |
             cd /usr/share/nginx/html
             git clone https://github.com/VillaviH/website-static.git
+            mv website-static frontend
             systemctl restart nginx.service
             
       #- name: Clonar el repositorio
