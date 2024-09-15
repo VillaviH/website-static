@@ -13,8 +13,8 @@ jobs:
       - name: Deploy to server PROD
         uses: appleboy/ssh-action@master
         with:
-          host: 44.203.52.112
-          username: root
+          host: ${{ secrets.SRV_IP }}
+          username: ${{ secrets.SRV_USERNAME }}
           key: ${{ secrets.SRV_SSHKEY }}
           script: |
             cd /usr/share/nginx/html
