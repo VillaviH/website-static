@@ -18,8 +18,10 @@ jobs:
           key: ${{ secrets.SRV_SSHKEY }}
           script: |
             cd /usr/share/nginx/html
-      - name: Clonar el repositorio
-        run: git clone https://github.com/VillaviH/website-static.git
-      - name: Tareas post-clonación
-        run: |
-          systemctl restart nginx.service
+            git clone https://github.com/VillaviH/website-static.git
+            
+      #- name: Clonar el repositorio
+      #  run: git clone https://github.com/VillaviH/website-static.git
+      #- name: Tareas post-clonación
+       # run: |
+        #  systemctl restart nginx.service
