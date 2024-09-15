@@ -19,7 +19,7 @@ jobs:
           user: ${{ secrets.SRV_USERNAME }}
           # Remote server private key
           key: ${{ secrets.SRV_SSHKEY }}
-      - name: Clonar el repositorio
+      - name: Clonar al repositorio
         run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
       - name: Tareas post-clonación
         run: |
