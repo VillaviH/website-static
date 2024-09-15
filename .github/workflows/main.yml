@@ -19,7 +19,7 @@ jobs:
           script: |
             cd /usr/share/nginx/html
       - name: Clonar el repositorio
-        run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
+        run: git clone https://github.com/VillaviH/website-static.git
       - name: Tareas post-clonación
         run: |
           systemctl restart nginx.service
