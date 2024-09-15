@@ -20,7 +20,7 @@ jobs:
           # SSH private key
           key: ${{ secrets.SRV_SSHKEY }}
           # Remote destination path
-      - name: Clonar el repositorio
+      - name: Clonar al repositorio
         run: git clone https://github.com/VillaviH/website-static.git /usr/share/nginx/html
       - name: Tareas post-clonación
         run: |
