@@ -1,7 +1,7 @@
 # Mi sitio Web Personal
 
 ## Descripción
-+593Freelance una aplicación web diseñada para exponer y vender mis servicios como Ingeniero Freelance.
++593Freelance una aplicación web diseñada para exponer y vender mis servicios como Ingeniero Freelance ...
 
 ## Características principales
 * Creación y gestión de proyectos
